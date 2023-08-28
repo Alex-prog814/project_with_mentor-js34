@@ -3,7 +3,10 @@ import Register from '../components/account/Register';
 
 const RegisterPage = () => {
   return (
-    <Register />
+    <>
+      <h2>Register User</h2>
+      <Register />
+    </>
   )
 }
 
