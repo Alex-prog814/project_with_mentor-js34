@@ -1,20 +1,51 @@
-/* !middle footer */
+/* !footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid green; */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* !contact us */
+.contactUs__footer {
+    margin-right: 30px;
+    color: #525c60;
+    width: 20%;
+}
+.contact__item {
+    text-align: right;
+    line-height: 40px;
+    font-size: 20px;
+}
+.contact__title {
+    margin-bottom: 30px;
+    color: #274c5b;
+    text-align: right;
+    font-size: 30px;
+}
+
+/* ! middle footer */
 .middle__footer {
-    font-family: "Roboto";
-    max-width: 30%;
-    margin: 0 auto;
+    width: 50%;
+    border-right: 1px solid #b3b6b7;
+    border-left: 1px solid #b3b6b7;
 }
 .middle__footer__title {
     display: flex;
+    margin: 10px;
+    margin-bottom: 30px;
     justify-content: center;
     align-items: center;
-    gap: 2%;
 }
+
 .middle__footer__title__logo {
     width: 36.582px;
     height: 45.716px;
     flex-shrink: 0;
 }
+
 .middle__footer__title__text {
     font-size: 38px;
     font-style: normal;
@@ -26,11 +57,11 @@
     color: #525c60;
     text-align: center;
     font-family: "Open Sans";
-    font-size: 14px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 165.4%;
-    width: 55%;
+    width: 80%;
     margin: 23px auto 0 auto;
 }
 .middle__footer__icons {
@@ -38,7 +69,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15px;
     width: 55%;
     margin: 40px auto 0 auto;
 }
@@ -46,27 +76,34 @@
     list-style-type: none;
 }
 .middle__footer__icons li > img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     flex-shrink: 0;
 }
 
-/* ! utility */
+/* ! Utility footer */
 .utility__h2 {
     color: #274c5b;
-    font-family: Roboto;
+    margin-bottom: 30px;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
+
+.utility__footer {
+    margin-left: 30px;
+    position: relative;
+    width: 20%;
+}
+
 .utility__list {
     list-style-type: none;
     color: #525c60;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
+    line-height: 60px;
     position: absolute;
     left: 0px;
-    line-height: 40px;
 }
