@@ -1,0 +1,9 @@
+/* Footer.module.css */
+.contact__item {
+  text-align: right;
+  line-height: 0.3;
+  margin-top: 3%;
+}
+.contact__title {
+  text-align: right;
+}
