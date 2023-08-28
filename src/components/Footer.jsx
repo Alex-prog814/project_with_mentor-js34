@@ -1,11 +1,10 @@
 import React from "react";
-// import style from '../styles/footer.module.css'
+import style from "../styles/footer.module.css";
 import Logo from "../icons/Logo.svg";
 import instagram from "../icons/instagram-icon-footer.svg";
 import facebook from "../icons/facebook-icon-footer.svg";
 import twitter from "../icons/twitter-icon-footer.svg";
 import pinterest from "../icons/pinterest-icon-footer.svg";
-import style from "../styles/index.module.css";
 
 const Footer = () => {
     return (
@@ -43,7 +42,8 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
-<div className={style.utility__footer}>
+
+            <div className={style.utility__footer}>
                 <h2 className={style.utility__h2}>Utility Pages</h2>
                 <ul className={style.utility__list}>
                     <li>Style Guide</li>
