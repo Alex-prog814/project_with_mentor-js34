@@ -2,3 +2,57 @@
   margin: 0;
   padding: 0;
 }
+
+.middle__footer {
+  font-family: "Roboto";
+  max-width: 30%;
+  margin: 0 auto;
+}
+.middle__footer__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+
+.middle__footer__title__logo {
+  width: 36.582px;
+  height: 45.716px;
+  flex-shrink: 0;
+}
+
+.middle__footer__title__text {
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #274c5b;
+}
+.middle__footer__text {
+  color: #525c60;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 165.4%;
+  width: 55%;
+  margin: 23px auto 0 auto;
+}
+.middle__footer__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 55%;
+  margin: 40px auto 0 auto;
+}
+.middle__footer__icons li {
+  list-style-type: none;
+}
+.middle__footer__icons li > img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
