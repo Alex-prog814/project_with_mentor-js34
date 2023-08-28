@@ -1,0 +1,87 @@
+.register_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background overlay */
+    background-blend-mode: overlay;
+    background-image: url('./back1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  /* Style for the form content */
+  .register_form_content {
+    width: 40%;
+    height: 25%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Style for input fields */
+  .register_input {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    opacity: 0.5;
+    font-size: 20px;
+  }
+  
+.register_button {
+    /* Your existing button styles */
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative; /* Create a stacking context for pseudo-elements */
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      filter: blur(30px);
+      transform: translateX(-50px) skewX(-15deg);
+      transition: transform 0.7s, opacity 0.7s;
+    }
+  
+    &:before {
+      width: 60px;
+      height: 50%;
+      left: 0;
+      top: 0;
+    }
+  
+    &:after {
+      width: 30px;
+      height: 50%;
+      left: 30px;
+      top: 0;
+    }
+  
+    &:hover {
+      background: #338033;
+      color: white;
+      &:before {
+        transform: translateX(50px) skewX(-15deg);
+        opacity: 0.6;
+      }
+      &:after {
+        transform: translateX(50px) skewX(-15deg);
+        opacity: 1;
+      }
+    }
+  }
