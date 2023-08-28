@@ -1,9 +1,9 @@
 import React from "react";
-// import Logo from "../icons/Logo.svg";
-// import instagram from "../icons/instagram-icon-footer.svg";
-// import facebook from "../icons/facebook-icon-footer.svg";
-// import twitter from "../icons/twitter-icon-footer.svg";
-// import pinterest from "../icons/pinterest-icon-footer.svg";
+import Logo from "../icons/Logo.svg";
+import instagram from "../icons/instagram-icon-footer.svg";
+import facebook from "../icons/facebook-icon-footer.svg";
+import twitter from "../icons/twitter-icon-footer.svg";
+import pinterest from "../icons/pinterest-icon-footer.svg";
 import style from "../styles/index.module.css";
 
 const Footer = () => {
