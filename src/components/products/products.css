@@ -7,22 +7,22 @@
 
 .card{
     position: relative;
-    height: 500px;
+    width: 32.33%;
+    height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: calc(33.33% - 10px);
     margin: 5px;
     background-color: #F9F8F8;
     border-radius: 25px;
     
 }
 
-img{
+.card > img{
     margin-top: 10%;
     width: 80%;
-    height: auto;
+    height: 250px;
 }
 
 .category{
@@ -47,12 +47,21 @@ display: flex;
 .name{
 color: #274C5B;
 margin-bottom: 10px;
+width: 80%;
+text-align: center;
+
 }
 
 .price{
-    border-top: 1px solid #DEDDDD;
-    padding: 10px 100%;
+    margin-top: 10px;
+    margin-bottom: -20px;
     color: #274C5B;
+}
+
+.line{
+    width: 250px;
+    color: black;
+    size: 4;
 }
 
 .buttons{
@@ -60,6 +69,7 @@ margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px;
 }
 
 .cart{
@@ -68,6 +78,11 @@ margin-bottom: 10px;
     background-color: #274C5B;
     border-radius: 50%;
     padding: 10px;
+}
+
+.cart > img{
+    height: 100%;
+    width: 100%;
 }
 
 .edit_delete{

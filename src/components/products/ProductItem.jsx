@@ -14,6 +14,7 @@ const ProductItem = ({ product }) => {
           <p className='category'>{type}</p>
           <div className='down'>
           <div className='name'>{name}</div>
+          <hr className='line' />
           <div className='price'>{price}$</div>
           <div className='buttons'>
             <button className='cart'><img src={cart} alt="cart" /></button>
