@@ -6,19 +6,22 @@
 .homepage__aboutus__block {
     background-color: #f9f8f8;
     width: 100%;
-    margin: 0 auto;
+    margin: 100px auto 0;
 }
 .homepage__aboutus__block .container {
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 80%;
     display: flex;
     justify-content: space-around;
     gap: 10%;
     padding-bottom: 7%;
     padding-top: 7%;
 }
+.img__wrapper {
+  width: 80%;
+}
 .aboutus__left__block {
-    width: 160%;
+    width: 120%;
     margin-left: -80px;
 }
 .aboutus__left__block img {
@@ -62,7 +65,7 @@
 }
 .aboutus__right__block__item {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     gap: 16px;
 }
 

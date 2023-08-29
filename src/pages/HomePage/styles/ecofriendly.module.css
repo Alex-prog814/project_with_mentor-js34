@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*font-family: 'Yellowtail', cursive;*/
+
+.ecofriendly__block {
+  display: flex;
+  align-items: center;
+}
+
+.info__block {
+  box-sizing: border-box;
+  position: relative;
+  left: -70px;
+  width: 40%;
+  height: 700px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  padding: 70px ;
+}
+
+.info__name {
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Yellowtail', cursive;
+  color: #7EB693;
+  margin-bottom: 10px;
+}
+
+.info__title {
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  color: #274C5B;
+}
+
+.info__subtitles_item {
+  margin-top: 40px;
+}
+
+.info__subtitle {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  color: #274C5B;
+}
+
+.info__subtitle_text {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  color: #525C60;
+  margin-top: 10px;
+}

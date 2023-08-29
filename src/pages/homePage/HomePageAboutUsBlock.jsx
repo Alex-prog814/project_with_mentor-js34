@@ -13,13 +13,15 @@ const HomePageAboutUsBlock = () => {
     return (
         <div className={styles.homepage__aboutus__block}>
             <div className={styles.container}>
-                <div>
-                    <img
-                        src={aboutUSImg}
-                        alt="error"
-                        className={styles.aboutus__left__block}
-                    />
-                </div>
+              <div className={styles.img__wrapper}>
+                  <div>
+                      <img
+                          src={aboutUSImg}
+                          alt="error"
+                          className={styles.aboutus__left__block}
+                      />
+                  </div>
+              </div>
                 <div className={styles.aboutus__right__block}>
                     <h2 className={styles.aboutus__right__block__header}>
                         About Us

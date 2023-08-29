@@ -5,6 +5,7 @@ import otter from "./images/otter.jpg";
 
 const BannerComp = () => {
     return (
+      <div className={style.banner}>
         <div className={style.container}>
             <div className={style.card}>
                 <p className={style.natural}>Natural!!</p>
@@ -25,6 +26,7 @@ const BannerComp = () => {
                 <img className={style.banner_img} src={otter} alt="" />
             </div>
         </div>
+      </div>
     );
 };
 
