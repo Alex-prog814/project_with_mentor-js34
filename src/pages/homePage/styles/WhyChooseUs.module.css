@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+.info {
+  background-color: #F9F8F8;
+  padding-bottom: 70px;
+  margin-bottom: 100px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.info__block {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*margin-bottom: 100px;*/
+  /*padding-bottom: 100px;*/
+}
+
+.info__block_left {
+  width: 40%;
+}
+
+.block__name {
+  color: #7EB693;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Yellowtail', cursive;
+  margin-bottom: 5px;
+}
+
+.block__title {
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  color: #274C5B;
+  margin-bottom: 25px;
+}
+
+.block__subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  color: #525C60;
+  margin-bottom: 35px;
+}
+
+.point__item {
+  width: 60%;
+  height: 80px;
+  border-radius: 50px;
+  padding: 0 35px;
+  background-color: #ECECEC;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.point__item_name {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  color: #274C5B;
+  margin-left: 10px;
+}
+
+.point__desc {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  color: #525C60;
+  margin-left: 65px;
+}
+
+.info__block_right {
+  width: 45%;
+}
+
+.img__wrapper {
+  width: 100%;
+}
+
+.info__cards {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.card__item {
+  width: 16%;
+  height: 305px;
+  border-radius: 35px;
+  background-color: #ffffff;
+  padding: 70px 35px 0;
+}
+
+.card__logo {
+  width: 35%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__title {
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #274C5B;
+  margin-bottom: 20px;
+}
+
+.card__text {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #525C60;
+}

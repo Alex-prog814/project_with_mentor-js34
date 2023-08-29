@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 
+.banner {
+  /*position: absolute;*/
+  margin-bottom: 250px;
+}
+
 .container {
     margin: 0 auto;
     width: 80%;
@@ -15,6 +20,7 @@
 }
 .card {
     width: 49%;
+    height: 370px;
     position: relative;
 }
 .h2 {
