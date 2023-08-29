@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import RegisterPage from '../pages/RegisterPage';
 import LoginPage from '../pages/LoginPage';
+import ProductsPage from '../pages/ProductsPage';
+
 
 const MainRoutes = () => {
     const ROUTES = [
@@ -20,6 +22,11 @@ const MainRoutes = () => {
             id: 3,
             path: '/login',
             element: <LoginPage />
+        },
+        {
+            id: 4,
+            path: '/products',
+            element: <ProductsPage />
         }
     ];
 

@@ -7,6 +7,8 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 
+import { updateToken } from '../../helpers/functions';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const Search = styled('div')(({ theme }) => ({
@@ -51,6 +53,12 @@ const Navbar = () => {
     },
   }));
 
+  React.useEffect(() => {
+    updateToken();
+  }, []);
+
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={style.navbar}>
@@ -63,7 +71,7 @@ const Navbar = () => {
 
               <ul className={style.navbar__menu}>
                 <li className={style.navbar__item}>Home</li>
-                <li className={style.navbar__item}>About us</li>
+                <li onClick={() => navigate('/products')} className={style.navbar__item}>Products</li>
                 <li className={style.navbar__item}>Cathegory</li>
                 <li className={style.navbar__item}>Pages</li>
               </ul>

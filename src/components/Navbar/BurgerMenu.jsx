@@ -12,14 +12,16 @@ import MailIcon from '@mui/icons-material/Mail';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { logout, checkUserLogin } from '../../helpers/functions';
+
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
     right: false,
   });
 
-  
+  const navigate = useNavigate();
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -37,16 +39,37 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Register', 'Login', 'Logout'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton component={Link} to={text.toLowerCase()}>
+        <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate('/register')}>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary='Register' />
+            </ListItemButton>
+        </ListItem>
+
+        {checkUserLogin() ? (
+          <ListItem disablePadding>
+          <ListItemButton onClick={() => {
+            logout();
+            navigate('/');
+          }}>
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary='Logout' />
+          </ListItemButton>
+          </ListItem>
+        ) : (
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate('login')}>
+              <ListItemIcon>
+                <MailIcon />
+              </ListItemIcon>
+              <ListItemText primary='Login' />
             </ListItemButton>
           </ListItem>
-        ))}
+        )}
       </List>
     </Box>
   );

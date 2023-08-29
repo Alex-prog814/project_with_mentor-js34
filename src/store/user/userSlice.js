@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { registerUser, loginUser } from './userActions';
-import { addDataToLocalStorage } from '../../helpers/functions';
+import { addDataToLocalStorage, updateToken } from '../../helpers/functions';
 
 const userSlice = createSlice({
     name: 'user',
@@ -24,7 +24,6 @@ const userSlice = createSlice({
         })
         .addCase(registerUser.fulfilled, (state, action) => {
             state.loading = false;
-            state.status = action.payload.res.data;
             action.payload.navigate('/login');
         })
         .addCase(registerUser.rejected, (state) => {
@@ -38,6 +37,7 @@ const userSlice = createSlice({
             state.loading = false;
             state.user = action.payload.user;
             addDataToLocalStorage(action.payload.user, action.payload.res.data);
+            updateToken();
             action.payload.navigate('/');
         })
         .addCase(loginUser.rejected, (state) => {
