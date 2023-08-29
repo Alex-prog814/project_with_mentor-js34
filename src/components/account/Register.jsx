@@ -1,56 +1,118 @@
-import React, { useState, useEffect } from 'react';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
-import { useDispatch, useSelector } from 'react-redux';
-import { registerUser } from '../../store/user/userActions';
-import { clearStatusState } from '../../store/user/userSlice';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+import { useDispatch, useSelector } from "react-redux";
+import { registerUser } from "../../store/user/userActions";
+import { clearStatusState } from "../../store/user/userSlice";
+import { useNavigate } from "react-router-dom";
+import style from "./acc_form.module.css";
 
 const Register = () => {
-  const [user, setUser] = useState({
-    username: '',
-    password: ''
-  });
+    const [user, setUser] = useState({
+        username: "",
+        password: "",
+    });
 
-  const { loading, status } = useSelector(state => state.user);
+    const { loading, status } = useSelector((state) => state.user);
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(clearStatusState());
-  }, []);
+    useEffect(() => {
+        dispatch(clearStatusState());
+    }, []);
 
-  return (
-    <>
-      {loading ? (
+    return (
         <>
-          <Box sx={{ display: 'flex' }}>
-            <CircularProgress />
-          </Box>
+            {loading ? (
+                <>
+                    <Box style={{ display: "flex" }}>
+                        <CircularProgress />
+                    </Box>
+                </>
+            ) : (
+                <>
+                    {status ? (
+                        <>
+                            {status === "error" && (
+                                <>
+                                    <div className={style.errorcenter}>
+                                        <div className={style.errorBlock}>
+                                            <h3>An error occured!</h3>
+                                            <button
+                                                className={style.registerBtn}
+                                                onClick={() =>
+                                                    dispatch(clearStatusState())
+                                                }>
+                                                Try again!
+                                            </button>
+                                        </div>
+                                    </div>
+                                </>
+                            )}
+                        </>
+                    ) : (
+                        <>
+                            <div className={style.reg_center}>
+                                <div className={style.registerDivValue}>
+                                    Register form
+                                </div>
+                            </div>
+
+                            <div className={style.regBlockCentr}>
+                                <div className={style.regBlock}>
+                                    <div className={style.leftregPart}>
+                                        <img
+                                            src="https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG9yZ2FuaWMlMjBmb29kfGVufDB8fDB8fHww&w=1000&q=80"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={style.rightRegPart}>
+                                        <input
+                                            className={style.registerInp}
+                                            type="text"
+                                            placeholder="Username"
+                                            onChange={(e) =>
+                                                setUser({
+                                                    ...user,
+                                                    username: e.target.value,
+                                                })
+                                            }
+                                        />
+
+                                        <input
+                                            className={style.registerInp}
+                                            type="password"
+                                            placeholder="Password"
+                                            onChange={(e) =>
+                                                setUser({
+                                                    ...user,
+                                                    password: e.target.value,
+                                                })
+                                            }
+                                        />
+
+                                        <button
+                                            className={style.registerBtn}
+                                            onClick={() =>
+                                                dispatch(
+                                                    registerUser({
+                                                        user,
+                                                        navigate,
+                                                    })
+                                                )
+                                            }>
+                                            Register
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </>
+                    )}
+                </>
+            )}
         </>
-      ) : (
-        <>
-          {status ? (
-            <>
-              {status === 'error' && <>
-                <h3>An error occured!</h3>
-                <button onClick={() => dispatch(clearStatusState())}>Try again!</button>
-              </>}
-            </>
-          ) : (
-            <>
-              <input type="text" placeholder="Username" onChange={(e) => setUser({ ...user, username: e.target.value })} />
+    );
+};
 
-              <input type="password" placeholder="Password" onChange={(e) => setUser({ ...user, password: e.target.value })} />
-
-              <button onClick={() => dispatch(registerUser({ user, navigate }))}>Register</button>
-            </>
-          )}
-        </>
-      )}
-    </>
-  )
-}
-
-export default Register
+export default Register;
