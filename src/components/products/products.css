@@ -1,0 +1,96 @@
+.card_list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 80%;
+}
+
+.card{
+    position: relative;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(33.33% - 10px);
+    margin: 5px;
+    background-color: #F9F8F8;
+    border-radius: 25px;
+    
+}
+
+img{
+    margin-top: 10%;
+    width: 80%;
+    height: auto;
+}
+
+.category{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #274C5B;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px 15px;
+
+}
+
+.down{
+margin-bottom: 10%;
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+color: #274C5B;
+margin-bottom: 10px;
+}
+
+.price{
+    border-top: 1px solid #DEDDDD;
+    padding: 10px 100%;
+    color: #274C5B;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart{
+    width: 50px;
+    height: 50px;
+    background-color: #274C5B;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.edit_delete{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.edit__btn{
+    background-color: yellow;
+    border-radius: 50%;
+    border: none;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+.delete__btn{
+    margin-top: 5px;
+    background-color: red;
+    border-radius: 50%;
+    border: none;
+    width: 25px;
+    height: 25px;
+}
+
