@@ -6,7 +6,7 @@
 .homepage__aboutus__block {
     background-color: #f9f8f8;
     width: 100%;
-    margin: 100px auto ;
+    margin: 100px auto 0;
 }
 .homepage__aboutus__block .container {
     margin: 0 auto;

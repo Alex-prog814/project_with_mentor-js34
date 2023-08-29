@@ -1,90 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+/*font-family: 'Yellowtail', cursive;*/
 
-
-
-.ecofriendly_block {
-    display: flex;
-    
+.ecofriendly__block {
+  display: flex;
+  align-items: center;
 }
 
-
-
-
-.ecofriendly-photo {
-    width: 500px;
-    height: 931px;
+.info__block {
+  box-sizing: border-box;
+  position: relative;
+  left: -70px;
+  width: 40%;
+  height: 700px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  padding: 70px ;
 }
 
-.ecofriendly_list {
-    align-items: center;
+.info__name {
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Yellowtail', cursive;
+  color: #7EB693;
+  margin-bottom: 10px;
 }
 
-
-
-.ecofriendly_text_1 {
-    font-family: 'Yellowtail', cursive;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 49.06px;
-    color: #7EB693;
+.info__title {
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  color: #274C5B;
 }
 
-.ecofriendly_text_2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 800;
-    font-size: 50px;
-    line-height: 58.59px;
-    color: #274C5B;
+.info__subtitles_item {
+  margin-top: 40px;
 }
 
-.ecofriendly_text_3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 29.3px;
-    color: #274C5B;
+.info__subtitle {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  color: #274C5B;
 }
 
-.ecofriendly_text_4 {
-    font-family: Open Sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 29.77px;
-    color: #525C60;
+.info__subtitle_text {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  color: #525C60;
+  margin-top: 10px;
 }
-
-.ecofriendly_text_5 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 29.3px;
-    color: #274C5B;
-}
-
-.ecofriendly_text_6 {
-    font-family: Open Sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 29.77px;
-    color: #525C60;
-}
-
-.ecofriendly_text_7 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 29.3px;
-    color: #274C5B;
-}
-
-.ecofriendly_text_8 {
-    font-family: Open Sans;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 29.77px;
-    color: #525C60;
-}
-

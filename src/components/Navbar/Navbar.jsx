@@ -70,7 +70,7 @@ const Navbar = () => {
             </div>
 
             <ul className={style.navbar__menu}>
-              <li className={style.navbar__item}>Home</li>
+              <li onClick={() => navigate("/")} className={style.navbar__item}>Home</li>
               <li
                 onClick={() => navigate("/products")}
                 className={style.navbar__item}
