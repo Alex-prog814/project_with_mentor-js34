@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Yellowtail&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.homepage__aboutus__block {
+  background-color: #f9f8f8;
+  width: 100%;
+  margin: 0 auto;
+}
+.homepage__aboutus__block .container {
+  margin: 0 auto;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-around;
+  gap: 10%;
+  padding-bottom: 7%;
+  padding-top: 7%;
+}
+.aboutus__left__block {
+  width: 160%;
+  margin-left: -80px;
+}
+.aboutus__left__block img {
+  flex-shrink: 0;
+}
+.aboutus__right__block {
+  width: 100%;
+}
+.aboutus__right__block__header {
+  margin-top: 8px;
+  color: #7eb693;
+  font-family: "Yellowtail";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.aboutus__right__block__subheader {
+  color: #274c5b;
+  font-family: "Roboto";
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.aboutus__right__block__descr {
+  margin-top: 14px;
+  color: #525c60;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 165.4%;
+}
+.aboutus__right__block__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 48px;
+}
+.aboutus__right__block__item {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.aboutus__right__block__item__title {
+}
+.aboutus__right__block__item__header {
+  color: #274c5b;
+  font-family: "Roboto";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.aboutus__right__block__item__descr {
+  color: #525c60;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 165.4%;
+}
+
+.aboutus__right__block__item__img {
+  padding: 22px 23px 20px 19px;
+  border-radius: 20px;
+  background: #fff;
+}
+.aboutus__right__block__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  padding: 28px;
+  border-radius: 16px;
+  background: #274c5b;
+}
+.aboutus__right__block__button__title {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-items: center;
+}
+.aboutus__right__block__button__img {
+  width: 19px;
+  height: 19px;
+}
