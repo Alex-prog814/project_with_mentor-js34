@@ -1,0 +1,26 @@
+.slider {
+  display: flex;
+  background-color: #f1f8f4;
+}
+.slider__item {
+  max-width: 30%;
+  /* justify-content: space-around; */
+  margin: 8% auto;
+  position: relative;
+}
+.slider__item img {
+  width: 100%;
+}
+.slider__button {
+  width: 50%;
+  height: 16%;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 21px;
+  z-index: 1;
+  position: absolute;
+  top: 42%;
+  right: 25%;
+  cursor: pointer;
+}

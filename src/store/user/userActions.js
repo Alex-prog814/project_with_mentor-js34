@@ -12,3 +12,14 @@ export const registerUser = createAsyncThunk(
         return { res, navigate };
     }
 );
+
+export const loginUser = createAsyncThunk(
+    'user/loginUser',
+    async ({ user, navigate }) => {
+        let formData = new FormData();
+        formData.append('username', user.username);
+        formData.append('password', user.password);
+        let res = await axios.post(`${ACCOUNT_API}/api/token/`, formData);
+        return { res, navigate, user: user.username };
+    }
+);
