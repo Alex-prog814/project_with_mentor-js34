@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 
+
+.header {
+  background:  url(../images//background.svg) no-repeat center top / cover;;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .first__div {
     height: 700px;
     width: 100%;
@@ -10,7 +20,7 @@
     margin-bottom: 200px;
 }
 .right__block_img {
-    width: 80%;
+    width: 60%;
 }
 .first_div_image {
     width: 100%;
