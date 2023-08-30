@@ -1,111 +1,108 @@
-.card_list{
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    width: 80%;
+.card_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 80%;
+  margin-bottom: 5%;
 }
 
-.card{
-    position: relative;
-    width: 32.33%;
-    height: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5px;
-    background-color: #F9F8F8;
-    border-radius: 25px;
-    
+.card {
+  position: relative;
+  width: 32.33%;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+  background-color: #f9f8f8;
+  border-radius: 25px;
 }
 
-.card > img{
-    margin-top: 10%;
-    width: 80%;
-    height: 250px;
+.card > img {
+  margin-top: 10%;
+  width: 80%;
+  height: 450px;
 }
 
-.category{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #274C5B;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px 15px;
-
+.category {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #274c5b;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px 15px;
 }
 
-.down{
-margin-bottom: 10%;
-display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.down {
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.name{
-color: #274C5B;
-margin-bottom: 10px;
-width: 80%;
-text-align: center;
-
+.name {
+  color: #274c5b;
+  margin-bottom: 10px;
+  width: 80%;
+  text-align: center;
 }
 
-.price{
-    margin-top: 10px;
-    margin-bottom: -20px;
-    color: #274C5B;
+.price {
+  margin-top: 10px;
+  margin-bottom: -20px;
+  color: #274c5b;
 }
 
-.line{
-    width: 250px;
-    color: black;
-    size: 4;
+.line {
+  width: 250px;
+  color: black;
+  size: 4;
 }
 
-.buttons{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
 }
 
-.cart{
-    width: 50px;
-    height: 50px;
-    background-color: #274C5B;
-    border-radius: 50%;
-    padding: 10px;
+.cart {
+  width: 50px;
+  height: 50px;
+  background-color: #274c5b;
+  border-radius: 50%;
+  padding: 10px;
 }
 
-.cart > img{
-    height: 100%;
-    width: 100%;
+.cart > img {
+  height: 100%;
+  width: 100%;
 }
 
-.edit_delete{
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
+.edit_delete {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
 }
 
-.edit__btn{
-    background-color: yellow;
-    border-radius: 50%;
-    border: none;
-    width: 25px;
-    height: 25px;
-    margin-bottom: 5px;
+.edit__btn {
+  background-color: yellow;
+  border-radius: 50%;
+  border: none;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 5px;
 }
 
-.delete__btn{
-    margin-top: 5px;
-    background-color: red;
-    border-radius: 50%;
-    border: none;
-    width: 25px;
-    height: 25px;
+.delete__btn {
+  margin-top: 5px;
+  background-color: red;
+  border-radius: 50%;
+  border: none;
+  width: 25px;
+  height: 25px;
 }
-
