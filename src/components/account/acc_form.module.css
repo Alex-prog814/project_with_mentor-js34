@@ -10,14 +10,18 @@
     height: 200px;
     align-items: center;
     justify-content: center;
-    background-image: url('../../icons/sheet.svg');
+    background-image: url('../../icons/matthes.jpg');
     background-repeat: no-repeat;
-    background-position: 0 center;
+    background-position: center center;
+    background-size:cover; 
 }
 .registerDivValue {
     font-size: 25px;
     font-weight: 600;
     color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 20%;
 }
 .regBlockCentr {
     display: flex;
