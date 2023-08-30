@@ -1,0 +1,21 @@
+.product__details {
+    margin: auto;
+    padding: 30px;
+    padding-bottom: 200px;
+    bottom: 10vh;
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: #274c5b;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    margin-bottom: 100px;
+}
+
+.product__details_desc {
+    line-height: 2;
+    color: #274c5b;
+}

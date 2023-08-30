@@ -1,35 +1,47 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getOneProduct } from '../../store/products/productsActions';
-import { clearOneProductState } from '../../store/products/productsSlice';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getOneProduct } from "../../store/products/productsActions";
+import { clearOneProductState } from "../../store/products/productsSlice";
+import style from "../../styles/productDetails.module.css";
 
 const ProductDetails = () => {
-    const { loading, oneProduct } = useSelector(state => state.products);
+    const { loading, oneProduct } = useSelector((state) => state.products);
+
     const dispatch = useDispatch();
     const { id } = useParams();
-
     useEffect(() => {
         dispatch(getOneProduct({ id }));
         return () => dispatch(clearOneProductState());
     }, []);
 
-  return (
-    <>
-        {loading ? (
-            <h3>Loading...</h3>
-        ) : (
-            <>
-                {oneProduct && (
-                    <div>
-                        <h3>{ oneProduct.name }</h3>
-                        <img src={oneProduct.picture} alt="error:(" width="350" height="350" />
-                    </div>
-                )}
-            </>
-        )}
-    </>
-  )
-}
+    console.log(oneProduct);
 
-export default ProductDetails
+    return (
+        <>
+            {loading ? (
+                <h3>Loading</h3>
+            ) : (
+                <>
+                    {oneProduct && (
+                        <div className={style.product__details}>
+                            <img
+                                src={oneProduct.picture}
+                                alt=""
+                                width="350"
+                                height="350"
+                            />
+                            <h3>{oneProduct.name}</h3>
+                            <h3>{oneProduct.price} USD </h3>
+                            <p className={style.product__details_desc}>
+                                {oneProduct.description}
+                            </p>
+                        </div>
+                    )}
+                </>
+            )}
+        </>
+    );
+};
+
+export default ProductDetails;
