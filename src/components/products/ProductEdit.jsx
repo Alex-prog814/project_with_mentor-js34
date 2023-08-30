@@ -25,16 +25,16 @@ const ProductEdit = () => {
     }
   }, [oneProduct]);
 
-  console.log(product);
-
   return (
     <>
       {loading ? (
-        <h3>....LOadinh</h3>
+
+        <h3>Loading...</h3>
       ) : (
         <>
           {product && (
             <>
+
               <h3>{product.name}</h3>
               <input
                 type="text"
@@ -61,6 +61,7 @@ const ProductEdit = () => {
               >
                 Save Changes
               </button>
+
             </>
           )}
         </>
@@ -68,5 +69,6 @@ const ProductEdit = () => {
     </>
   );
 };
+
 
 export default ProductEdit;

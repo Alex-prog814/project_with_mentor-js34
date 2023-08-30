@@ -9,6 +9,7 @@ import ProductEditPage from "../pages/ProductEditPage";
 import ProductCreatePage from "../pages/ProductCreatePage";
 
 const MainRoutes = () => {
+
   const ROUTES = [
     {
       id: 1,
@@ -46,6 +47,7 @@ const MainRoutes = () => {
       element: <ProductCreatePage />,
     },
   ];
+
 
   return (
     <Routes>

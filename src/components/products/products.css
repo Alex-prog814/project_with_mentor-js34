@@ -22,8 +22,9 @@
 .card > img {
   margin-top: 10%;
   width: 80%;
-  height: 300px;
+  height: auto;
   cursor: pointer;
+  margin: auto auto;
 }
 
 .category {
@@ -79,6 +80,7 @@
   background-color: #274c5b;
   border-radius: 50%;
   padding: 10px;
+  cursor: pointer;
 }
 
 .cart > img {
@@ -99,6 +101,12 @@
   width: 25px;
   height: 25px;
   margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.edit__btn:hover{
+  border: 2px solid yellow;
+  background: none;
 }
 
 .delete__btn {
@@ -108,4 +116,10 @@
   border: none;
   width: 25px;
   height: 25px;
+  cursor: pointer;
+}
+
+.delete__btn:hover{
+  border: 2px solid red;
+  background: none;
 }

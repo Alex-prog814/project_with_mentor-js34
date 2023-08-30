@@ -1,12 +1,15 @@
-import React from "react";
-import ProductCreate from "../components/products/ProductCreate";
+
+import React from 'react';
+import ProductCreate from '../components/products/ProductCreate';
+
 
 const ProductCreatePage = () => {
   return (
     <div>
-      <ProductCreate />
+       <ProductCreate />
     </div>
-  );
-};
+  )
+}
 
-export default ProductCreatePage;
+export default ProductCreatePage
+       

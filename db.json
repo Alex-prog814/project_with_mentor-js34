@@ -3,15 +3,15 @@
     {
       "name": "MacBook Pro 16",
       "description": "10-ядерный процессор 32-ядерный графический процессор 16-ядерная система Neural Engine 64 ГБ объединённой памяти SSD-накопитель 2 ТБ Дисплей Liquid Retina XDR 16 дюймов Три порта Thunderbolt 4 Порт HDMI Слот для карт SDXC Разъём питания MagSafe 3 Клавиатура Magic Keyboard с Touch ID Трекпад Force Touch Адаптер питания USB-C 140 Вт",
-      "price": 550,
-      "picture": "https://www.istore.kg/media/products/Pro-16-M1-SP-US-1_hZ4eLKK.webp",
+      "price": "55000",
+      "picture": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
       "type": "electronics",
       "id": 1
     },
     {
       "name": "MacBook Pro 14",
       "description": "10-ядерный процессор 16-ядерный графический процессор 16-ядерная система Neural Engine 32 ГБ объединённой памяти SSD-накопитель 1 ТБ Дисплей Liquid Retina XDR 14 дюймов Три порта Thunderbolt 4 Порт HDMI Слот для карт SDXC Разъём питания MagSafe 3 Клавиатура Magic Keyboard с Touch ID Трекпад Force Touch Адаптер питания USB-C 96 Вт",
-      "price": 3200,
+      "price": "320078787",
       "picture": "https://www.istore.kg/media/products/Pro-14-M1-Silver-US-1_lzqer6g.webp",
       "type": "electronics",
       "id": 2
@@ -1280,22 +1280,8 @@
       "type": "sport",
       "id": 160
     },
-    {
-      "name": "fdsz",
-      "description": "vds",
-      "picture": "",
-      "price": "6",
-      "type": "vfdz",
-      "pisture": "vds",
-      "id": 161
-    },
-    {
-      "name": "",
-      "description": "",
-      "picture": "",
-      "price": "",
-      "type": "",
-      "id": 162
-    }
+    
+
+    
   ]
 }
