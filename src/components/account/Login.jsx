@@ -61,7 +61,7 @@ const Login = () => {
                                 <div className={style.regBlock}>
                                     <div className={style.leftregPart}>
                                         <img
-                                            src="https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG9yZ2FuaWMlMjBmb29kfGVufDB8fDB8fHww&w=1000&q=80"
+                                            src="https://plus.unsplash.com/premium_photo-1675237625753-c01705e314bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGZydWl0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"
                                             alt=""
                                         />
                                     </div>

@@ -63,8 +63,8 @@ const Register = () => {
                                 <div className={style.regBlock}>
                                     <div className={style.leftregPart}>
                                         <img
-                                            src="https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG9yZ2FuaWMlMjBmb29kfGVufDB8fDB8fHww&w=1000&q=80"
-                                            alt=""
+                                            src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1992&q=80"
+                                            alt="eror"
                                         />
                                     </div>
                                     <div className={style.rightRegPart}>
