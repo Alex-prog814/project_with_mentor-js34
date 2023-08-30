@@ -13,17 +13,17 @@ const ProductItem = ({ product }) => {
 
   return (
       <div className="card">
-          <img onClick={() => navigate(`/products/${id}`)} src={picture} alt={name} />
+          <img onClick={() => navigate(/products/${id})} src={picture} alt={name} />
           <p className='category'>{type}</p>
           <div className='down'>
-          <div onClick={() => navigate(`/products/${id}`)} className='name'>{name}</div>
+          <div onClick={() => navigate(/products/${id})} className='name'>{name}</div>
           <hr className='line' />
-          <div onClick={() => navigate(`/products/${id}`)} className='price'>{price}$</div>
+          <div onClick={() => navigate(/products/${id})} className='price'>{price}$</div>
           {checkUserLogin() && (
             <div className='buttons'>
             <button className='cart'><img src={cart} alt="cart" /></button>
             <div className='edit_delete'>
-            <button onClick={() => navigate(`/product-edit/${id}`)} className="edit__btn">
+            <button onClick={() => navigate(/product-edit/${id})} className="edit__btn">
                 <FaEdit />
               </button>
               <button className="delete__btn">
