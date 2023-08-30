@@ -22,10 +22,27 @@ const ProductEdit = () => {
     };
   }, [oneProduct]);
 
-  console.log(product);
-
   return (
-    <div>ProductEdit</div>
+    <>
+      {loading ? (
+        <h3>Loading...</h3>
+      ) : (
+        <>
+          {product && (
+            <>
+              <h3>{ product.name }</h3>
+              <input type="url" placeholder="Picture" onChange={(e) => setProduct({ ...product, picture: e.target.value })} value={product.picture} />
+              <img src={product.picture} alt="error:(" width="100" height="100" />
+              <input type="number" placeholder="Price" onChange={(e) => setProduct({ ...product, price: e.target.value })} value={product.price} />
+              <button onClick={() => {
+                dispatch(editProduct(product));
+                navigate('/products');
+              }}>Save Changes</button>
+            </>
+          )}
+        </>
+      )}
+    </>
   )
 }
 

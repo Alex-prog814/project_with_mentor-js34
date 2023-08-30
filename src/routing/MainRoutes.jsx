@@ -6,6 +6,7 @@ import LoginPage from "../pages/LoginPage";
 import ProductsPage from "../pages/ProductsPage";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
 import ProductEditPage from "../pages/ProductEditPage";
+import ProductCreatePage from "../pages/ProductCreatePage";
 
 const MainRoutes = () => {
     const ROUTES = [
@@ -38,6 +39,11 @@ const MainRoutes = () => {
             id: 6,
             path: "/product-edit/:id",
             element: <ProductEditPage />,
+        },
+        {
+            id: 7,
+            path: "/product-create",
+            element: <ProductCreatePage />,
         }
     ];
 

@@ -3,6 +3,7 @@ import './products.css';
 import cart from '../../icons/Icon.svg';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { checkUserLogin } from '../../helpers/functions';
 
 const ProductItem = ({ product }) => {
 
@@ -18,7 +19,8 @@ const ProductItem = ({ product }) => {
           <div onClick={() => navigate(`/products/${id}`)} className='name'>{name}</div>
           <hr className='line' />
           <div onClick={() => navigate(`/products/${id}`)} className='price'>{price}$</div>
-          <div className='buttons'>
+          {checkUserLogin() && (
+            <div className='buttons'>
             <button className='cart'><img src={cart} alt="cart" /></button>
             <div className='edit_delete'>
             <button onClick={() => navigate(`/product-edit/${id}`)} className="edit__btn">
@@ -28,7 +30,8 @@ const ProductItem = ({ product }) => {
                 <FaTrash />
               </button>
               </div>
-          </div>
+            </div>
+          )}
           </div>
       </div>
   );

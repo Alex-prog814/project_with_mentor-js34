@@ -49,7 +49,8 @@ export default function TemporaryDrawer() {
         </ListItem>
 
         {checkUserLogin() ? (
-          <ListItem disablePadding>
+          <>
+            <ListItem disablePadding>
           <ListItemButton onClick={() => {
             logout();
             navigate('/');
@@ -59,7 +60,19 @@ export default function TemporaryDrawer() {
             </ListItemIcon>
             <ListItemText primary='Logout' />
           </ListItemButton>
-          </ListItem>
+            </ListItem>
+            
+            <ListItem disablePadding>
+              <ListItemButton onClick={() => {
+                navigate('/product-create');
+              }}>
+                <ListItemIcon>
+                  <MailIcon />
+                </ListItemIcon>
+                <ListItemText primary='Create Product' />
+              </ListItemButton>
+            </ListItem>
+          </>
         ) : (
           <ListItem disablePadding>
             <ListItemButton onClick={() => navigate('login')}>

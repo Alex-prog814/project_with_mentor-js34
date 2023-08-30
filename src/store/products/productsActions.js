@@ -26,3 +26,12 @@ export const editProduct = createAsyncThunk(
         return res;
     }
 );
+
+export const createProduct = createAsyncThunk(
+    'products/createProduct',
+    async (newProductObj, { dispatch }) => {
+        let res = await axios.post(PRODUCTS_API, newProductObj);
+        dispatch(getProducts());
+        return res;
+    }
+);
