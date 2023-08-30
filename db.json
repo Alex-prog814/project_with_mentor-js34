@@ -1279,6 +1279,23 @@
       "picture": "https://img.joomcdn.net/682b1eee0ddf1f207ab0ae1e7ee4522bdc7a8b2f_original.jpeg",
       "type": "sport",
       "id": 160
+    },
+    {
+      "name": "fdsz",
+      "description": "vds",
+      "picture": "",
+      "price": "6",
+      "type": "vfdz",
+      "pisture": "vds",
+      "id": 161
+    },
+    {
+      "name": "",
+      "description": "",
+      "picture": "",
+      "price": "",
+      "type": "",
+      "id": 162
     }
   ]
 }

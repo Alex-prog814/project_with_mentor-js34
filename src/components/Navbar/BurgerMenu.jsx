@@ -1,20 +1,19 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
 //import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import MailIcon from "@mui/icons-material/Mail";
 
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 
-import { Link, useNavigate } from 'react-router-dom';
-import { logout, checkUserLogin } from '../../helpers/functions';
-
+import { Link, useNavigate } from "react-router-dom";
+import { logout, checkUserLogin } from "../../helpers/functions";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -24,7 +23,10 @@ export default function TemporaryDrawer() {
   const navigate = useNavigate();
 
   const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
       return;
     }
 
@@ -40,33 +42,50 @@ export default function TemporaryDrawer() {
     >
       <List>
         <ListItem disablePadding>
-            <ListItemButton onClick={() => navigate('/register')}>
-              <ListItemIcon>
-                <MailIcon />
-              </ListItemIcon>
-              <ListItemText primary='Register' />
-            </ListItemButton>
-        </ListItem>
-
-        {checkUserLogin() ? (
-          <ListItem disablePadding>
-          <ListItemButton onClick={() => {
-            logout();
-            navigate('/');
-          }}>
+          <ListItemButton onClick={() => navigate("/register")}>
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
-            <ListItemText primary='Logout' />
+            <ListItemText primary="Register" />
           </ListItemButton>
-          </ListItem>
+        </ListItem>
+
+        {checkUserLogin() ? (
+          <>
+            <ListItem disablePadding>
+              <ListItemButton
+                onClick={() => {
+                  logout();
+                  navigate("/");
+                }}
+              >
+                <ListItemIcon>
+                  <MailIcon />
+                </ListItemIcon>
+                <ListItemText primary="Logout" />
+              </ListItemButton>
+            </ListItem>
+
+            <ListItem disablePadding>
+              <ListItemButton
+                onClick={() => {
+                  navigate("/product-create");
+                }}
+              >
+                <ListItemIcon>
+                  <MailIcon />
+                </ListItemIcon>
+                <ListItemText primary="Create Product" />
+              </ListItemButton>
+            </ListItem>
+          </>
         ) : (
           <ListItem disablePadding>
-            <ListItemButton onClick={() => navigate('login')}>
+            <ListItemButton onClick={() => navigate("login")}>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
-              <ListItemText primary='Login' />
+              <ListItemText primary="Login" />
             </ListItemButton>
           </ListItem>
         )}
@@ -77,7 +96,7 @@ export default function TemporaryDrawer() {
   return (
     <div>
       <IconButton
-        onClick={toggleDrawer('right', true)}
+        onClick={toggleDrawer("right", true)}
         size="large"
         edge="start"
         color="inherit"
@@ -88,12 +107,11 @@ export default function TemporaryDrawer() {
       </IconButton>
       <Drawer
         anchor="right"
-        open={state['right']}
-        onClose={toggleDrawer('right', false)}
+        open={state["right"]}
+        onClose={toggleDrawer("right", false)}
       >
-        {list('right')}
+        {list("right")}
       </Drawer>
-
     </div>
   );
 }

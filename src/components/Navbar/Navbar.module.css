@@ -32,6 +32,7 @@ li {
 }
 .navbar__logo img {
   width: 70%;
+  cursor: pointer;
 }
 
 .navbar__menu {
@@ -45,6 +46,7 @@ li {
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   color: #274c5b;
+  cursor: pointer;
 }
 
 .navbar__info {
