@@ -9,7 +9,7 @@
 .card {
   position: relative;
   width: 32.33%;
-  height: 750px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +22,8 @@
 .card > img {
   margin-top: 10%;
   width: 80%;
-  height: 450px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .category {
@@ -48,12 +49,14 @@
   margin-bottom: 10px;
   width: 80%;
   text-align: center;
+  cursor: pointer;
 }
 
 .price {
   margin-top: 10px;
   margin-bottom: -20px;
   color: #274c5b;
+  cursor: pointer;
 }
 
 .line {

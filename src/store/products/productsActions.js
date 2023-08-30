@@ -9,3 +9,20 @@ export const getProducts = createAsyncThunk(
         return res;
     }
 );
+
+export const getOneProduct = createAsyncThunk(
+    'products/getOneProduct',
+    async ({ id }) => {
+        let res = await axios.get(`${PRODUCTS_API}/${id}`);
+        return res;
+    }
+);
+
+export const editProduct = createAsyncThunk(
+    'products/editProduct',
+    async (editedObj, { dispatch }) => {
+        let res = await axios.patch(`${PRODUCTS_API}/${editedObj.id}`, editedObj);
+        dispatch(getProducts());
+        return res;
+    }
+);

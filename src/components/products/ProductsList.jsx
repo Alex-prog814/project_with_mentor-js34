@@ -13,8 +13,6 @@ const ProductsList = () => {
         dispatch(getProducts());
     }, []);
 
-    console.log(products);
-
   return (
     <>
         { loading ? (
