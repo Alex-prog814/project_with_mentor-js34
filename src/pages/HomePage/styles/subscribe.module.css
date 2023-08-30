@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&family=Yellowtail&display=swap');
+
+
+.subscribe_main {
+    display: flex;
+    width: 1400;
+    height: 323px;
+    position: relative;
+}
+
+
+.subscribe_block {
+    position: relative; 
+  }
+
+  .subscribe_overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+   
+     
+  }
+
+.subscribe_block_text {
+    font-family: 'Roboto', sans-serif;
+    font-family: Roboto;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 58.59px;
+    color: #FFFFFF;
+    
+}
+
+
+.subscribe_block_btn {
+    font-family: 'Roboto', sans-serif;
+    width: 220px;
+    height: 80px;
+    border-radius: 16px;
+    gap: 10px;
+    background-color: #274C5B;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23.44px;
+    
+    
+
+}

@@ -6,6 +6,7 @@ import HomePageAboutUsBlock from "./HomePage/HomePageAboutUsBlock";
 import WhyChooseUs from "./HomePage/WhyChooseUs";
 import Slider from "./HomePage/Slider"
 import EcoFriendly from "./HomePage/EcoFriendly";
+import Subscribe from "./HomePage/Subscribe";
 
 const HomePage = () => {
     return (
@@ -17,6 +18,7 @@ const HomePage = () => {
           <EcoFriendly />
           <Slider />
           <WhyChooseUs />
+          <Subscribe />
         {/*</div>*/}
       </>
     );
