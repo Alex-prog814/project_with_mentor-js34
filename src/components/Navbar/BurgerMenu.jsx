@@ -15,6 +15,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useNavigate } from 'react-router-dom';
 import { logout, checkUserLogin } from '../../helpers/functions';
 
+import register from '../../img/register.png'
+import login from '../../img/login.png'
+import add from '../../img/add.png'
+import cart from '../../img/cart.png'
+import logoutIcon from '../../img/logout.png'
+
+import style from './Navbar.module.css'
+
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -41,9 +49,7 @@ export default function TemporaryDrawer() {
       <List>
         <ListItem disablePadding>
             <ListItemButton onClick={() => navigate('/register')}>
-              <ListItemIcon>
-                <MailIcon />
-              </ListItemIcon>
+            <img className={style.register__logo} src={register} alt="" />
               <ListItemText primary='Register' />
             </ListItemButton>
         </ListItem>
@@ -51,34 +57,37 @@ export default function TemporaryDrawer() {
         {checkUserLogin() ? (
           <>
             <ListItem disablePadding>
-          <ListItemButton onClick={() => {
-            logout();
-            navigate('/');
-          }}>
-            <ListItemIcon>
-              <MailIcon />
-            </ListItemIcon>
-            <ListItemText primary='Logout' />
-          </ListItemButton>
-            </ListItem>
-            
-            <ListItem disablePadding>
+              <ListItemButton onClick={() => {
+                logout();
+                navigate('/');
+              }}>
+                <img className={style.profile__logo} src={logoutIcon} alt="" />
+                <ListItemText primary='Logout' />
+              </ListItemButton>
+              </ListItem>
+
+              <ListItem disablePadding>
               <ListItemButton onClick={() => {
                 navigate('/product-create');
               }}>
-                <ListItemIcon>
-                  <MailIcon />
-                </ListItemIcon>
-                <ListItemText primary='Create Product' />
+                <img className={style.profile__logo} src={add} alt="" />
+                <ListItemText primary='Create product' />
               </ListItemButton>
-            </ListItem>
+              </ListItem>
+              
+              <ListItem disablePadding>
+              <ListItemButton onClick={() => {
+                navigate('');
+              }}>
+                <img className={style.cart__logo} src={cart} alt="" />
+                <ListItemText primary='Add to cart' />
+              </ListItemButton>
+              </ListItem>
           </>
         ) : (
           <ListItem disablePadding>
             <ListItemButton onClick={() => navigate('login')}>
-              <ListItemIcon>
-                <MailIcon />
-              </ListItemIcon>
+              <img className={style.login__logo} src={login} alt="" />
               <ListItemText primary='Login' />
             </ListItemButton>
           </ListItem>

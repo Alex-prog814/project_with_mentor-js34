@@ -94,11 +94,12 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 100px;
+  box-sizing: border-box;
 }
 
 .card__item {
-  width: 16%;
-  height: 305px;
+  width: 20%;
+  height: 355px;
   border-radius: 35px;
   background-color: #ffffff;
   padding: 70px 35px 0;

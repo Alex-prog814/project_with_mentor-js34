@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=FontName&display=swap");
+
 * {
     font-family: "FontName", sans-serif;
 
@@ -10,18 +12,12 @@
     height: 200px;
     align-items: center;
     justify-content: center;
-    background-image: url('../../icons/matthes.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size:cover; 
+    background-color: rgba(244, 243, 243, 0.413);
 }
 .registerDivValue {
     font-size: 25px;
     font-weight: 600;
-    color: white;
-    border-radius: 10px;
-    position: absolute;
-    left: 20%;
+    color: #274c5b;
 }
 .regBlockCentr {
     display: flex;

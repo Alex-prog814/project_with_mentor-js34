@@ -95,15 +95,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
     margin-top: 40px;
-    padding: 28px;
+    padding: 28px 47px 22px 39px;
     border-radius: 16px;
     background: #274c5b;
     border: transparent;
+    transition: 0.5s ease;
 }
 .aboutus__right__block__button:hover {
-    cursor: pointer;
+  background-color: #7eb693;
+  color: #000000;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 .aboutus__right__block__button__title {
     color: #fff;

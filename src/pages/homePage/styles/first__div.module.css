@@ -46,16 +46,23 @@
 
 .div__button {
     width: 200px;
-    height: 80px;
+    height: 70px;
+    padding-top: 15px;
     background-color: #efd372;
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 20px;
+    transition: 0.5s;
+    border: #274c5b 1px solid;
 }
 .div__button:hover {
-    cursor: pointer;
+  background-color: #68a47f;
+  color: #000000;
+  transition: 0.5s ease;
+  cursor: pointer;
+  border: #274c5b 1px solid;
 }
 .button_text {
     color: #274c5b;
