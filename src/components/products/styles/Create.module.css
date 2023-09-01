@@ -1,0 +1,41 @@
+.create__input {
+  border: 1px solid #274c5b;
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.create__btn {
+  padding: 10px;
+  display: flex;
+  width: 20%;
+  margin: 2%;
+  border: none;
+  justify-content: center;
+  background: #274c5b;
+  /* border-bottom: 4px solid #274c5b; */
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.create__btn:hover {
+  background-color: #5c8374;
+  transition: 1s;
+}
+.create__panel {
+  margin: 5% auto 10%;
+  display: flex;
+  width: 40%;
+  background-color: white;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 15px;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.create__panel h3 {
+  margin: 3%;
+}
