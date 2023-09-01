@@ -69,6 +69,24 @@ export const addProductToCart = (productObj) => {
     setCartData(cart);
 };
 
+export const countProductTotalCost = (productItem, count) => {
+    return productItem.price * count;
+};
+
+export const changeCountProductInCart = (productId, count) => {
+    if(count <= 0) return alert('Count of product must be positiove int!');
+    const cart = getCartData();
+    cart.products = cart.products.map(item => {
+        if(item.productItem.id === productId) {
+            item.count = count;
+            item.totalCost = countProductTotalCost(item.productItem, count);
+        };
+        return item;
+    });
+    cart.totalCost = countCartTotalCost(cart.products);
+    setCartData(cart);
+};
+
 // const cart = {
 //     user: 'Tom',
 //     totalCost: 700,
