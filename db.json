@@ -1,52 +1,12 @@
 {
   "products": [
     {
-      "name": "MacBook Pro 16",
-      "description": "10-ядерный процессор 32-ядерный графический процессор 16-ядерная система Neural Engine 64 ГБ объединённой памяти SSD-накопитель 2 ТБ Дисплей Liquid Retina XDR 16 дюймов Три порта Thunderbolt 4 Порт HDMI Слот для карт SDXC Разъём питания MagSafe 3 Клавиатура Magic Keyboard с Touch ID Трекпад Force Touch Адаптер питания USB-C 140 Вт",
-      "price": "55000",
-      "picture": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-      "type": "electronics",
-      "id": 1
-    },
-    {
-      "name": "MacBook Pro 14",
-      "description": "10-ядерный процессор 16-ядерный графический процессор 16-ядерная система Neural Engine 32 ГБ объединённой памяти SSD-накопитель 1 ТБ Дисплей Liquid Retina XDR 14 дюймов Три порта Thunderbolt 4 Порт HDMI Слот для карт SDXC Разъём питания MagSafe 3 Клавиатура Magic Keyboard с Touch ID Трекпад Force Touch Адаптер питания USB-C 96 Вт",
-      "price": "320078787",
-      "picture": "https://www.istore.kg/media/products/Pro-14-M1-Silver-US-1_lzqer6g.webp",
-      "type": "electronics",
-      "id": 2
-    },
-    {
-      "name": "MacBook Pro 13",
-      "description": "8-ядерный процессор 10-ядерный графический процессор 16-ядерная система Neural Engine 8 ГБ объединённой памяти SSD-накопитель 256 ГБ Дисплей Retina 13 дюймов Два порта Thunderbolt 4 Magic Keyboard Touch Bar и Touch ID Трекпад Force Touch Адаптер питания USB-C 67 Вт",
-      "price": 1500,
-      "picture": "https://www.istore.kg/media/products/mbp-spacegray-gallery1-202206.webp",
-      "type": "electronics",
-      "id": 3
-    },
-    {
-      "name": "MacBook Air 13",
-      "description": "8-ядерный процессор 10-ядерный графический процессор 16-ядерная система Neural Engine 8 ГБ объединённой памяти SSD-накопитель 512 ГБ Liquid Retina 13.6 дюймов Камера FaceTime 1080p Два порта Thunderbolt 4 Порт MagSafe 3 Magic Keyboard with Touch ID Адаптер питания USB-C 35 Вт",
-      "price": 1900,
-      "picture": "https://www.istore.kg/media/products/macbook-air-midnight-gallery1-20220606_uai9Xx3.webp",
-      "type": "electronics",
-      "id": 4
-    },
-    {
       "name": "Mac mini",
       "description": "Чип Apple M1 с 8‑ядерным процессором, 8‑ядерным графическим процессором и 16‑ядерной системой Neural Engine 8 ГБ объединённой памяти SSD‑накопитель 256 ГБ Порт Gigabit Ethernet",
       "price": 1900,
       "picture": "https://www.istore.kg/media/products/mini-intel-1.webp",
       "type": "electronics",
       "id": 5
-    },
-    {
-      "name": "Mac Studio",
-      "description": "20-ядерный процессор 48-ядерный графический процессор 32-ядерная система Neural Engine 64 ГБ объединённой памяти SSD-накопитель 1 ТБ Front: Два порта Thunderbolt4,  Слот для карт SDXC Back: Четыре порта Thunderbolt4 Два порта USB-A 10-гигабитный Ethernet порт Порт HDMI Разъём для наушников 3.5 мм",
-      "price": 5200,
-      "picture": "https://www.istore.kg/media/products/mac-studio-202203-gallery-3.webp",
-      "type": "electronics",
-      "id": 6
     },
     {
       "name": "Studio Display",
@@ -87,14 +47,6 @@
       "picture": "https://www.istore.kg/media/products/12-Black.webp",
       "type": "electronics",
       "id": 11
-    },
-    {
-      "name": "Mac Mini(M1,2020)",
-      "description": "Чип Apple M1 с 8-ядерным процессором, 8-ядерным графическим процессором и 16-ядерной системой Neural Engine 8 ГБ объединённой памяти SSD-накопитель 256 ГБ Порт Gigabit Ethernet",
-      "price": 790,
-      "picture": "https://www.istore.kg/media/products/mini-m1-1_ioi2c2Q.webp",
-      "type": "electronics",
-      "id": 12
     },
     {
       "name": "Mac mini (Intel, 2018)",

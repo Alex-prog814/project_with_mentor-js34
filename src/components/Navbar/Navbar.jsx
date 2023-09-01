@@ -92,7 +92,7 @@ const Navbar = () => {
                 />
               </Search>
 
-              <div className={style.cart}>
+              <div onClick={() => navigate('/cart')} className={style.cart}>
                 <img src={cart} alt="error" />
               </div>
 

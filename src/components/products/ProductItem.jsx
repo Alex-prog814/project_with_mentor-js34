@@ -3,12 +3,15 @@ import "./products.css";
 import cart from "../../icons/Icon.svg";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { checkUserLogin } from "../../helpers/functions";
+import { checkUserLogin, addProductToCart } from "../../helpers/functions";
+import { deleteProduct } from "../../store/products/productsActions";
+import { useDispatch } from 'react-redux';
 
 const ProductItem = ({ product }) => {
     const { name, description, price, picture, type, id } = product;
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     return (
         <div className="card">
@@ -32,7 +35,7 @@ const ProductItem = ({ product }) => {
                 </div>
                 {checkUserLogin() && (
                     <div className="buttons">
-                        <button className="cart">
+                        <button onClick={() => addProductToCart(product)} className="cart">
                             <img src={cart} alt="cart" />
                         </button>
                         <div className="edit_delete">
@@ -41,7 +44,7 @@ const ProductItem = ({ product }) => {
                                 className="edit__btn">
                                 <FaEdit />
                             </button>
-                            <button className="delete__btn">
+                            <button onClick={() => dispatch(deleteProduct({ id }))} className="delete__btn">
                                 <FaTrash />
                             </button>
                         </div>
