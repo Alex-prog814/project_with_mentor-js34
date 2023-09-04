@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCart } from '../../store/cart/cartSlice';
-import { changeCountProductInCart } from '../../helpers/functions';
+import { changeCountProductInCart, deleteProductFromCart, cleanCart } from '../../helpers/functions';
 
 const Cart = () => {
   const { cart } = useSelector(state => state.cart);
@@ -11,14 +11,13 @@ const Cart = () => {
     dispatch(getCart());
   }, []);
 
-  // console.log(cart);
-
   return (
     <div>
       {cart && (
         <>
           {cart.products.length ? (
-            <table border="2">
+            <>
+              <table border="2">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -51,12 +50,21 @@ const Cart = () => {
                       { product.totalCost }
                     </td>
                     <td>
-                      <button>Delete</button>
+                      <button onClick={() => {
+                        deleteProductFromCart(product.productItem.id);
+                        dispatch(getCart());
+                      }}>Delete</button>
                     </td>
                   </tr>
                 ))}
               </tbody>
-            </table>
+              </table>
+              <h3>Total cost: ${cart.totalCost}</h3>
+              <button onClick={() => {
+                cleanCart();
+                dispatch(getCart());
+              }}>Clean cart</button>
+            </>
           ) : (
             <h3>Cart is empty!</h3>
           )}

@@ -88,26 +88,13 @@ export const changeCountProductInCart = (productId, count) => {
     setCartData(cart);
 };
 
-// const cart = {
-//     user: 'Tom',
-//     totalCost: 700,
-//     products: [
-//         {
-//             count: 2,
-//             totalCost: 300,
-//             productItem: {
-                    // id: 8
-//                 name: 'Samsung',
-                    // price: 100,
-                    // desc: 'vlfv'
-//             }
-//         },
-//         {
-//             count: 4,
-//             totalCost: 400,
-//             productItem: {
-//                 ...productFormDb
-//             }
-//         }
-//     ]
-// }   
+export const deleteProductFromCart = (productId) => {
+    const cart = getCartData();
+    cart.products = cart.products.filter(product => product.productItem.id !== productId);
+    cart.totalCost = countCartTotalCost(cart.products);
+    setCartData(cart);
+};
+
+export const cleanCart = () => {
+    localStorage.removeItem('cart');
+};

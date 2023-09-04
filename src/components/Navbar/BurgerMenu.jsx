@@ -78,7 +78,7 @@ export default function TemporaryDrawer() {
               
               <ListItem disablePadding>
               <ListItemButton onClick={() => {
-                navigate('');
+                navigate('/cart');
               }}>
                 <img className={style.cart__logo} src={cart} alt="" />
                 <ListItemText primary='Add to cart' />
