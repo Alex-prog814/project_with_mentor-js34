@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ACCOUNT_API } from './consts';
+import { ACCOUNT_API, PRODUCTS_API } from './consts';
 
 export const addDataToLocalStorage = (user, tokens) => {
     localStorage.setItem('user', JSON.stringify(user));
@@ -102,4 +102,23 @@ export const cleanCart = () => {
 export const getProductsCountInCart = () => {
     const cart = getCartData();
     return cart.products.length;
+};
+
+export const getCategories = async () => {
+    const { data } = await axios.get(`${PRODUCTS_API}`);
+    const uniqueCategories = new Set(data.map(product => product.type));
+    const categories = [];
+    for(let i of uniqueCategories) {
+        categories.push(i);
+    };
+    return categories;
+};
+
+export const getTotalPages = async (url) => {
+    console.log(url);
+    const { data } = await axios.get(url);
+    console.log(data.length);
+    const totalPages = Math.ceil(data.length / 12);
+    console.log(totalPages);
+    return totalPages;
 };

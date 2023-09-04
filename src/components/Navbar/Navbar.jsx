@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./img/logo.svg";
-import cart from "./img/cart.png";
 import style from "./Navbar.module.css";
 import BurgerMenu from "./BurgerMenu";
-
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
-
-import { updateToken } from "../../helpers/functions";
+import { updateToken, getCategories } from "../../helpers/functions";
 import { useNavigate } from "react-router-dom";
-
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../../store/products/productsActions";
+import { changeCategory, changeSearchVal } from "../../store/products/productsSlice";
 
 
 const Navbar = () => {
@@ -57,11 +56,22 @@ const Navbar = () => {
     },
   }));
 
-  React.useEffect(() => {
-    updateToken();
-  }, []);
+  const [search, setSearch] = useState('');
+  const [categories, setCategories] = useState([]);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const getCategoriesData = async () => {
+    let categories = await getCategories();
+    setCategories(categories);
+  };
+
+  React.useEffect(() => {
+    updateToken();
+    getCategoriesData();
+    dispatch(getProducts());
+  }, []);
 
   return (
     <>
@@ -81,15 +91,20 @@ const Navbar = () => {
               </li>
               <li className={style.navbar__item}>
                   <NavDropdown id="nav-dropdown nav-dropdown-menu-white" title="Type" menuVariant="light" className={style.dropdown__menu}>
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                  </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => {
+                        dispatch(changeCategory({ category: '' }));
+                        dispatch(getProducts());
+                      }}>
+                        all
+                    </NavDropdown.Item>
+                    {categories.map((category, index) => (
+                      <NavDropdown.Item key={index} onClick={() => {
+                        dispatch(changeCategory({ category }));
+                        dispatch(getProducts());
+                      }}>
+                        {category}
+                      </NavDropdown.Item>
+                    ))}
                 </NavDropdown>
               </li>
               <li className={style.navbar__item}>
@@ -97,15 +112,21 @@ const Navbar = () => {
               </li>
             </ul>
 
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              dispatch(changeSearchVal({ search }));
+              dispatch(getProducts());
+            }}>
+              <input type="text" onChange={(e) => setSearch(e.target.value)}/>
+              <button type="submit">Search</button>
+            </form>
+
             <div className={style.navbar__info}>
               <Search>
                 <SearchIconWrapper>
                   <SearchIcon />
                 </SearchIconWrapper>
-                <StyledInputBase
-                  placeholder="Search…"
-                  inputProps={{ "aria-label": "search" }}
-                />
+                  <StyledInputBase />
               </Search>
               <BurgerMenu />
             </div>

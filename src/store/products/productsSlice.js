@@ -8,7 +8,9 @@ const productsSlice = createSlice({
         products: [],
         oneProduct: null,
         currentPage: 1,
-        totalPages: 1
+        totalPages: 1,
+        currentCategory: '',
+        search: ''
     },
     reducers: {
         clearOneProductState: (state) => {
@@ -16,6 +18,14 @@ const productsSlice = createSlice({
         },
         changePage: (state, action) => {
             state.currentPage = action.payload.page;
+        },
+        changeCategory: (state, action) => {
+            state.currentCategory = action.payload.category;
+            state.currentPage = 1;
+        },
+        changeSearchVal: (state, action) => {
+            state.search = action.payload.search;
+            state.currentPage = 1;
         }
     },
     extraReducers: (builder) => {
@@ -44,5 +54,5 @@ const productsSlice = createSlice({
     }
 });
 
-export const { clearOneProductState, changePage } = productsSlice.actions;
+export const { clearOneProductState, changePage, changeCategory, changeSearchVal } = productsSlice.actions;
 export default productsSlice.reducer;
