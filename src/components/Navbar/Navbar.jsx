@@ -11,6 +11,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import { updateToken } from "../../helpers/functions";
 import { useNavigate } from "react-router-dom";
 
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+
 const Navbar = () => {
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -70,15 +73,28 @@ const Navbar = () => {
             </div>
 
             <ul className={style.navbar__menu}>
-              <li onClick={() => navigate("/")} className={style.navbar__item}>Home</li>
-              <li
-                onClick={() => navigate("/products")}
-                className={style.navbar__item}
-              >
-                Products
+              <li onClick={() => navigate("/")} className={style.navbar__item}>
+                <a href="">Home</a>
               </li>
-              <li className={style.navbar__item}>Cathegory</li>
-              <li className={style.navbar__item}>Pages</li>
+              <li onClick={() => navigate("/products")} className={style.navbar__item}>
+                <a href="">Products</a>
+              </li>
+              <li className={style.navbar__item}>
+                  <NavDropdown id="nav-dropdown nav-dropdown-menu-white" title="Type" menuVariant="light" className={style.dropdown__menu}>
+                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">
+                    Another action
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.4">
+                    Separated link
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </li>
+              <li className={style.navbar__item}>
+                <a href="#">Pages</a>
+              </li>
             </ul>
 
             <div className={style.navbar__info}>
@@ -91,11 +107,6 @@ const Navbar = () => {
                   inputProps={{ "aria-label": "search" }}
                 />
               </Search>
-
-              <div onClick={() => navigate('/cart')} className={style.cart}>
-                <img src={cart} alt="error" />
-              </div>
-
               <BurgerMenu />
             </div>
           </div>

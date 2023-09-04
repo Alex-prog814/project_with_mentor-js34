@@ -27,6 +27,7 @@ export const checkUserLogin = () => {
     return true;
 };
 
+
 // cart
 export const getCartData = () => {
     const cart = JSON.parse(localStorage.getItem('cart'));

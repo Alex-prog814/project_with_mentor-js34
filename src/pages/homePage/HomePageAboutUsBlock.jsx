@@ -108,13 +108,6 @@ const HomePageAboutUsBlock = () => {
                         >
                             Shop Now
                         </h2>
-                        <img
-                            src={aboutUsBtnIcon}
-                            alt="error"
-                            className={
-                                styles.aboutus__right__block__button__img
-                            }
-                        />
                     </button>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-//import Button from '@mui/material/Button';
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -11,6 +10,14 @@ import MailIcon from "@mui/icons-material/Mail";
 
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+
+import register from '../../img/register.png'
+import login from '../../img/login.png'
+import add from '../../img/add.png'
+import cart from '../../img/cart.png'
+import logoutIcon from '../../img/logout.png'
+
+import style from './Navbar.module.css'
 
 import { Link, useNavigate } from "react-router-dom";
 import { logout, checkUserLogin } from "../../helpers/functions";
@@ -33,36 +40,62 @@ export default function TemporaryDrawer() {
         setState({ ...state, [anchor]: open });
     };
 
-    const list = (anchor) => (
-        <Box
-            sx={{ width: 450 }}
-            role="presentation"
-            onClick={toggleDrawer(anchor, false)}
-            onKeyDown={toggleDrawer(anchor, false)}>
-            <List>
-                <ListItem disablePadding>
-                    <ListItemButton onClick={() => navigate("/register")}>
-                        <ListItemIcon>
-                            <MailIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Register" />
-                    </ListItemButton>
-                </ListItem>
+  const list = (anchor) => (
+    <Box
+      sx={{ width: 450 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate('/register')}>
+            <img className={style.register__logo} src={register} alt="" />
+              <ListItemText primary='Register' />
+            </ListItemButton>
+        </ListItem>
 
-                {checkUserLogin() ? (
-                    <>
-                        <ListItem disablePadding>
-                            <ListItemButton
-                                onClick={() => {
-                                    logout();
-                                    navigate("/");
-                                }}>
-                                <ListItemIcon>
-                                    <MailIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="Logout" />
-                            </ListItemButton>
-                        </ListItem>
+        {checkUserLogin() ? (
+          <>
+            <ListItem disablePadding>
+              <ListItemButton onClick={() => {
+                logout();
+                navigate('/');
+              }}>
+                <img className={style.profile__logo} src={logoutIcon} alt="" />
+                <ListItemText primary='Logout' />
+              </ListItemButton>
+              </ListItem>
+
+              <ListItem disablePadding>
+              <ListItemButton onClick={() => {
+                navigate('/product-create');
+              }}>
+                <img className={style.profile__logo} src={add} alt="" />
+                <ListItemText primary='Create product' />
+              </ListItemButton>
+              </ListItem>
+              
+              <ListItem disablePadding>
+              <ListItemButton onClick={() => {
+                navigate('');
+              }}>
+                <img className={style.cart__logo} src={cart} alt="" />
+                <ListItemText primary='Add to cart' />
+              </ListItemButton>
+              </ListItem>
+          </>
+        ) : (
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate('login')}>
+              <img className={style.login__logo} src={login} alt="" />
+              <ListItemText primary='Login' />
+            </ListItemButton>
+          </ListItem>
+        )}
+      </List>
+    </Box>
+  );
 
                         <ListItem disablePadding>
                             <ListItemButton
