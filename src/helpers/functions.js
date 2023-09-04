@@ -115,10 +115,7 @@ export const getCategories = async () => {
 };
 
 export const getTotalPages = async (url) => {
-    console.log(url);
     const { data } = await axios.get(url);
-    console.log(data.length);
     const totalPages = Math.ceil(data.length / 12);
-    console.log(totalPages);
     return totalPages;
 };
