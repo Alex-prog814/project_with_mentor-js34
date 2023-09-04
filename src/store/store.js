@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import userSlice from './user/userSlice';
 import productsReducer from './products/productsSlice';
-import cartSlice from './cart/cartSlice'
+import cartReducer from './cart/cartSlice';
 
 export default configureStore({
     middleware: getDefaultMiddleware => getDefaultMiddleware({
@@ -10,6 +10,6 @@ export default configureStore({
     reducer: {
         user: userSlice,
         products: productsReducer,
-        cart: cartSlice
+        cart: cartReducer
     }
 });

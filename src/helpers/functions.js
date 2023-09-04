@@ -28,44 +28,86 @@ export const checkUserLogin = () => {
 };
 
 
-// cart 
-
+// cart
 export const getCartData = () => {
-  const cart = JSON.parse(localStorage.getItem('cart'));
-  if(!cart) return {
-    user: '',
-    totalCost: 0,
-    products: []
-  }
-  return cart;
-}
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    if(!cart) return {
+        user: '',
+        totalCost: 0,
+        products: []
+    };
+    return cart;
+};
 
 export const setCartData = (cartObj) => {
-  cartObj.user = JSON.parse(localStorage.getItem('user'));
-  localStorage.setItem('cart', JSON.stringify(cartObj));
-}
+    cartObj.user = JSON.parse(localStorage.getItem('user'));
+    localStorage.setItem('cart', JSON.stringify(cartObj));
+};
 
 export const checkProductInCart = (productId) => {
-  const cart = getCartData();
-  return cart.products.find(product => product.productItem.id === productId)
-}
+    const cart = getCartData();
+    return cart.products.find(product => product.productItem.id === productId);
+};
 
 export const countCartTotalCost = (cartProducts) => {
-  return cartProducts.reduce((acc, currVal) => {
-    return acc + currVal.totalCost;
-  })
-}
+    return cartProducts.reduce((acc, currVal) => {
+        return acc + currVal.totalCost;
+    }, 0);
+};
 
-//export const addProductToCart = (productId) => {
-//  const cart = getCartData();
-//  if(!checkProductInCart(productObj.id)) {
-//    cart.products.push({
-//      const: 1,
-//      totalCost: +productObj.price,
-//      productItem: productObj
-//    })
-//  } else {
-//    cart.products = cart.products.filter(item => item.productItem.id !== productObj.id);
-//  }
-//  cart.totalCost = 
-//}
+export const addProductToCart = (productObj) => {
+    const cart = getCartData();
+    if(!checkProductInCart(productObj.id)) {
+        cart.products.push({
+            count: 1,
+            totalCost: +productObj.price,
+            productItem: productObj
+        });
+    } else {
+        cart.products = cart.products.filter(item => item.productItem.id !==productObj.id);
+    };
+    cart.totalCost = countCartTotalCost(cart.products);
+    setCartData(cart);
+};
+
+export const countProductTotalCost = (productItem, count) => {
+    return productItem.price * count;
+};
+
+export const changeCountProductInCart = (productId, count) => {
+    if(count <= 0) return alert('Count of product must be positiove int!');
+    const cart = getCartData();
+    cart.products = cart.products.map(item => {
+        if(item.productItem.id === productId) {
+            item.count = count;
+            item.totalCost = countProductTotalCost(item.productItem, count);
+        };
+        return item;
+    });
+    cart.totalCost = countCartTotalCost(cart.products);
+    setCartData(cart);
+};
+
+// const cart = {
+//     user: 'Tom',
+//     totalCost: 700,
+//     products: [
+//         {
+//             count: 2,
+//             totalCost: 300,
+//             productItem: {
+                    // id: 8
+//                 name: 'Samsung',
+                    // price: 100,
+                    // desc: 'vlfv'
+//             }
+//         },
+//         {
+//             count: 4,
+//             totalCost: 400,
+//             productItem: {
+//                 ...productFormDb
+//             }
+//         }
+//     ]
+// }   

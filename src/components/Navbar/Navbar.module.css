@@ -33,6 +33,7 @@ li {
 }
 .navbar__logo img {
   width: 70%;
+  cursor: pointer;
 }
 
 .navbar__menu {
@@ -135,9 +136,6 @@ li {
   margin-right: 20px;
 }
 
-/*#nav-dropdown-dark-example {
-  background-color: #ffffff !important;
-}*/
 
 .navbar__info {
   width: 20%;

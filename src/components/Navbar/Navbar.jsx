@@ -107,7 +107,6 @@ const Navbar = () => {
                   inputProps={{ "aria-label": "search" }}
                 />
               </Search>
-
               <BurgerMenu />
             </div>
           </div>
