@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getCartData } from '../../helpers/functions';
+import { getCartData, getProductsCountInCart } from '../../helpers/functions';
 
 export const cartSlice = createSlice({
     name: 'cart',
@@ -10,6 +10,7 @@ export const cartSlice = createSlice({
     reducers: {
         getCart: (state) => {
             state.cart = getCartData();
+            state.countProductsInCart = getProductsCountInCart();
         }
     }
 });

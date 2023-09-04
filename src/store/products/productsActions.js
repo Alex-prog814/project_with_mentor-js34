@@ -4,9 +4,12 @@ import { PRODUCTS_API } from "../../helpers/consts";
 
 export const getProducts = createAsyncThunk(
   "products/getProducts",
-  async () => {
-    let res = await axios.get(PRODUCTS_API);
-    return res;
+  async (_, { getState }) => {
+    let totalPages = await axios.get(PRODUCTS_API);
+    totalPages = Math.ceil(totalPages.data.length / 12);
+    const { currentPage } = getState().products;
+    const res = await axios.get(`${PRODUCTS_API}?_page=${currentPage}&_limit=12`);
+    return { res, totalPages };
   }
 );
 

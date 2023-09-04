@@ -4,30 +4,32 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
-
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-
 import register from '../../img/register.png'
 import login from '../../img/login.png'
 import add from '../../img/add.png'
 import cart from '../../img/cart.png'
 import logoutIcon from '../../img/logout.png'
-
 import style from './Navbar.module.css'
-
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { logout, checkUserLogin } from "../../helpers/functions";
+import { useDispatch, useSelector } from 'react-redux';
+import { getCart } from '../../store/cart/cartSlice';
 
 export default function TemporaryDrawer() {
     const [state, setState] = React.useState({
         right: false,
     });
+    const { countProductsInCart } = useSelector(state => state.cart);
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    React.useEffect(() => {
+      dispatch(getCart());
+    }, []);
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (
@@ -83,6 +85,7 @@ export default function TemporaryDrawer() {
                 <img className={style.cart__logo} src={cart} alt="" />
                 <ListItemText primary='Add to cart' />
               </ListItemButton>
+              <h3>{ countProductsInCart }</h3>
               </ListItem>
           </>
         ) : (

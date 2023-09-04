@@ -98,3 +98,8 @@ export const deleteProductFromCart = (productId) => {
 export const cleanCart = () => {
     localStorage.removeItem('cart');
 };
+
+export const getProductsCountInCart = () => {
+    const cart = getCartData();
+    return cart.products.length;
+};

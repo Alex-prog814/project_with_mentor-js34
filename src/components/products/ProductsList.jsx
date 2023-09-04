@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../../store/products/productsActions';
 import ProductItem from './ProductItem';
+import Pagination from './Pagination';
 import './products.css';
 
 const ProductsList = () => {
@@ -22,6 +23,7 @@ const ProductsList = () => {
                 {products.map(product => (
                     <ProductItem key={product.id} product={product} />
                 ))}
+                <Pagination />
             </div>
         ) }
     </>

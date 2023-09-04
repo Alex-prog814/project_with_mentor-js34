@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { checkUserLogin, addProductToCart } from "../../helpers/functions";
 import { deleteProduct } from "../../store/products/productsActions";
 import { useDispatch } from 'react-redux';
+import { getCart } from '../../store/cart/cartSlice';
 
 const ProductItem = ({ product }) => {
     const { name, description, price, picture, type, id } = product;
@@ -35,7 +36,10 @@ const ProductItem = ({ product }) => {
                 </div>
                 {checkUserLogin() && (
                     <div className="buttons">
-                        <button onClick={() => addProductToCart(product)} className="cart">
+                        <button onClick={() => {
+                            addProductToCart(product);
+                            dispatch(getCart());
+                        }} className="cart">
                             <img src={cart} alt="cart" />
                         </button>
                         <div className="edit_delete">
