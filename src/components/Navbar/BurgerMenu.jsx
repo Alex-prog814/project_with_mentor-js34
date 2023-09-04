@@ -97,32 +97,6 @@ export default function TemporaryDrawer() {
     </Box>
   );
 
-                        <ListItem disablePadding>
-                            <ListItemButton
-                                onClick={() => {
-                                    navigate("/product-create");
-                                }}>
-                                <ListItemIcon>
-                                    <MailIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="Create Product" />
-                            </ListItemButton>
-                        </ListItem>
-                    </>
-                ) : (
-                    <ListItem disablePadding>
-                        <ListItemButton onClick={() => navigate("login")}>
-                            <ListItemIcon>
-                                <MailIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Login" />
-                        </ListItemButton>
-                    </ListItem>
-                )}
-            </List>
-        </Box>
-    );
-
     return (
         <div>
             <IconButton
